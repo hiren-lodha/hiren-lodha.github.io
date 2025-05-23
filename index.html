@@ -1,40 +1,94 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Presentation</title>
+    <!-- Solarized theme (non-default) -->
+    <link rel="stylesheet" href="dist/theme/solarized.css">
+    <!-- Custom styling -->
+    <style>
+      .reveal h1, .reveal h2, .reveal h3 {
+        color: #268bd2; /* Custom blue color */
+      }
+      .reveal .slides {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- Slide 1 (Horizontal) -->
+        <section>
+          <h1>Welcome to My Presentation</h1>
+          <p>Created with Reveal.js</p>
+          <img src="examples/assets/image1.png" width="200" alt="Logo">
+        </section>
 
-		<title>reveal.js</title>
+        <!-- Slide 2 with Vertical Slides -->
+        <section>
+          <!-- Main horizontal slide -->
+          <section>
+            <h2>Main Topic Overview</h2>
+            <p>This is the parent slide</p>
+            <p>↓ Press DOWN for details</p>
+          </section>
+          <!-- Vertical sub-slide 1 -->
+          <section>
+            <h3>Detailed Point 1</h3>
+            <ul>
+              <li>First important item</li>
+              <li>Second important item</li>
+            </ul>
+          </section>
+          <!-- Vertical sub-slide 2 -->
+          <section>
+            <h3>Detailed Point 2</h3>
+            <p>More in-depth information here</p>
+          </section>
+        </section>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+        <!-- Slide 3 (Markdown) -->
+        <section data-markdown>
+          <textarea data-template>
+            ## Markdown Support
+            - Easy **formatting**
+            - Lists work naturally
+            - Code blocks too:
+              ```javascript
+              console.log("Hello Reveal.js!");
+              ```
+          </textarea>
+        </section>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+        <!-- Slide 4 (Image Focus) -->
+        <section>
+          <h2>Visual Demonstration</h2>
+          <img src="examples/assets/image2.png" width="500" alt="Demo">
+          <p class="fragment fade-in">This text appears on click</p>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <!-- Slide 5 (Conclusion) -->
+        <section>
+          <h2>Thank You!</h2>
+          <p>Any questions?</p>
+          <p>Contact me: your@email.com</p>
+        </section>
+      </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false, // Left-align
+        plugins: [ RevealMarkdown ],
+        transition: 'convex' // Different transition
+      });
+    </script>
+  </body>
 </html>
