@@ -3,91 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Presentation</title>
-    <!-- Solarized theme (non-default) -->
+    <title>Hiren's Presentation</title>
+    <!-- Solarized theme -->
     <link rel="stylesheet" href="dist/theme/solarized.css">
-    <!-- Custom styling -->
+    <!-- Reveal.js core CSS -->
+    <link rel="stylesheet" href="dist/reveal.css">
     <style>
-      .reveal h1, .reveal h2, .reveal h3 {
-        color: #268bd2; /* Custom blue color */
+      /* Custom styling */
+      .reveal h1, .reveal h2 {
+        color: #268bd2;
+        margin-bottom: 30px;
       }
       .reveal .slides {
         text-align: left;
+        padding-left: 20px;
+      }
+      .reveal img {
+        border: 2px solid #586e75;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
       }
     </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <!-- Slide 1 (Horizontal) -->
+        <!-- Slide 1: Title -->
         <section>
-          <h1>Welcome to My Presentation</h1>
-          <p>Created with Reveal.js</p>
-          <img src="examples/assets/image1.png" width="200" alt="Logo">
+          <h1>My Presentation</h1>
+          <p>Created by Hiren Lodha</p>
+          <img src="images/download.jpg" width="300" alt="Main Image">
         </section>
 
-        <!-- Slide 2 with Vertical Slides -->
+        <!-- Slide 2: Vertical Slides -->
         <section>
-          <!-- Main horizontal slide -->
           <section>
-            <h2>Main Topic Overview</h2>
-            <p>This is the parent slide</p>
+            <h2>Project Overview</h2>
+            <p>This is the main horizontal slide</p>
             <p>↓ Press DOWN for details</p>
           </section>
-          <!-- Vertical sub-slide 1 -->
           <section>
-            <h3>Detailed Point 1</h3>
-            <ul>
-              <li>First important item</li>
-              <li>Second important item</li>
-            </ul>
-          </section>
-          <!-- Vertical sub-slide 2 -->
-          <section>
-            <h3>Detailed Point 2</h3>
-            <p>More in-depth information here</p>
+            <h3>Key Features</h3>
+            <img src="images/download (1).jpg" width="400" alt="Feature 1">
+            <p class="fragment">Feature description appears on click</p>
           </section>
         </section>
 
-        <!-- Slide 3 (Markdown) -->
-        <section data-markdown>
-          <textarea data-template>
-            ## Markdown Support
-            - Easy **formatting**
-            - Lists work naturally
-            - Code blocks too:
-              ```javascript
-              console.log("Hello Reveal.js!");
-              ```
-          </textarea>
-        </section>
-
-        <!-- Slide 4 (Image Focus) -->
+        <!-- Slide 3: Image Focus -->
         <section>
           <h2>Visual Demonstration</h2>
-          <img src="examples/assets/image2.png" width="500" alt="Demo">
-          <p class="fragment fade-in">This text appears on click</p>
+          <img src="images/download (2).jpg" width="500" alt="Demo">
+          <p class="fragment fade-in">Analysis of this diagram</p>
         </section>
 
-        <!-- Slide 5 (Conclusion) -->
+        <!-- Slide 4: Conclusion -->
         <section>
           <h2>Thank You!</h2>
-          <p>Any questions?</p>
-          <p>Contact me: your@email.com</p>
+          <p>Contact: hiren@example.com</p>
         </section>
       </div>
     </div>
 
+    <!-- Scripts -->
     <script src="dist/reveal.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
     <script>
       Reveal.initialize({
         controls: true,
         progress: true,
         history: true,
-        center: false, // Left-align
-        plugins: [ RevealMarkdown ],
-        transition: 'convex' // Different transition
+        center: false, // Left-aligned
+        transition: 'convex',
+        // Optional plugins
+        plugins: []
       });
     </script>
   </body>
